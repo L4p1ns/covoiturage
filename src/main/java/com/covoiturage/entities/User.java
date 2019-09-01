@@ -1,5 +1,6 @@
 package com.covoiturage.entities;
 
+import com.covoiturage.entities.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -31,8 +32,8 @@ public class User extends DateAudit {
     @Size(max = 15)
     private String username;
 
-    @Size(max = 15)
-    private String phone;
+//    @Size(max = 15)
+//    private String phone;
 
     @NaturalId
     @NotBlank
@@ -54,12 +55,12 @@ public class User extends DateAudit {
 
     }
 
-    public User(String name, String username, String email, String password, String phone) {
+    public User(String name, String username, String email, String password) {
         this.name = name;
         this.username = username;
         this.email = email;
         this.password = password;
-        this.phone = phone;
+//        this.phone = phone;
     }
 
     public Long getId() {
@@ -110,11 +111,11 @@ public class User extends DateAudit {
         this.roles = roles;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+//    public String getPhone() {
+//        return phone;
+//    }
+//
+//    public void setPhone(String phone) {
+//        this.phone = phone;
+//    }
 }

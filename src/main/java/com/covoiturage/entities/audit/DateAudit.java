@@ -1,4 +1,4 @@
-package com.covoiturage.entities;
+package com.covoiturage.entities.audit;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;
